@@ -1,5 +1,5 @@
 [project]
-name = "python-uv-template"
+name = "html_css_basics"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -11,14 +11,14 @@ requires = ["setuptools >= 61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["python_uv_template"]
+packages = ["html_css_basics"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt", "requirements-dev.txt"]}
 
 [tool.coverage]
 branch = true
-source = ["python_uv_template"]
+source = ["html_css_basics"]
 
 [tool.coverage.run]
 omit = [
@@ -35,7 +35,7 @@ testpaths = ["tests"]
 [tool.ruff]
 fix = true
 line-length = 88
-src = ["python_uv_template"]
+src = ["html_css_basics"]
 
 [tool.ruff.format]
 docstring-code-format = true
@@ -45,5 +45,5 @@ docstring-code-line-length = 20
 select = ["E", "F", "UP", "B", "SIM", "I"]
 
 [tool.ruff.lint.isort]
-known-local-folder = ["python_uv_template"]
+known-local-folder = ["html_css_basics"]
 no-lines-before = ["local-folder"]
