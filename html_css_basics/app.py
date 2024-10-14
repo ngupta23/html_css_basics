@@ -1,5 +1,6 @@
-from fasthtml import common as fh
 import logging
+
+from fasthtml import common as fh
 
 logger = logging.getLogger("html_css_basics")
 logger.setLevel(logging.INFO)
@@ -85,7 +86,10 @@ def create_app():
                 blank,
                 fh.Div(
                     "box-content with height, width, padding and border set",
-                    cls="box-content bg-green-500 text-white h-36 w-48 p-4 border-4 border-black",
+                    cls=(
+                        "box-content bg-green-500 text-white h-36 w-48 p-4 "
+                        "border-4 border-black",
+                    ),
                 ),
             ),
             # https://www.geeksforgeeks.org/tailwind-css-display/
@@ -153,11 +157,15 @@ def create_app():
                     fh.Span("4", cls="bg-green-600 w-24 h-12"),
                     fh.Span("5", cls="bg-green-500 w-24 h-12"),
                     fh.Span("6", cls="bg-green-400 w-24 h-12"),
-                    cls="ml-24 h-28 w-96 flex flex-wrap bg-green-200 border-solid border-4 border-green-900",
+                    cls=(
+                        "ml-24 h-28 w-96 flex flex-wrap bg-green-200",
+                        "border-solid border-4 border-green-900",
+                    ),
                 ),
                 blank,
                 fh.Div(
-                    # compresses the content irrespective of the width you have specified
+                    # compresses the content irrespective of the width you have
+                    # specified
                     "display=flex-nowrap",
                     fh.Span("1", cls="bg-green-900 w-24 h-12"),
                     fh.Span("2", cls="bg-green-800 w-24 h-12"),
@@ -165,7 +173,10 @@ def create_app():
                     fh.Span("4", cls="bg-green-600 w-24 h-12"),
                     fh.Span("5", cls="bg-green-500 w-24 h-12"),
                     fh.Span("6", cls="bg-green-400 w-24 h-12"),
-                    cls="ml-24 h-28 w-96 flex flex-nowrap bg-green-200 border-solid border-4 border-green-900",
+                    cls=(
+                        "ml-24 h-28 w-96 flex flex-nowrap bg-green-200",
+                        "border-solid border-4 border-green-900",
+                    ),
                 ),
             ),
             # https://www.geeksforgeeks.org/tailwind-css-flex/
@@ -213,7 +224,10 @@ def create_app():
                         fh.Div(
                             "Side Part", cls="rounded bg-green-600 flex-grow h-12 mr-12"
                         ),
-                        cls="flex border-4 border-green-600 justify-evenly space-x-2 ml-12 mr-12",
+                        cls=(
+                            "flex border-4 border-green-600 justify-evenly "
+                            "space-x-2 ml-12 mr-12"
+                        ),
                     ),
                 ),
                 blank,
@@ -225,7 +239,10 @@ def create_app():
                             "Flex-Grow-0", cls="rounded bg-green-300 flex-grow h-12"
                         ),
                         fh.Div("Side Part", cls="rounded bg-green-600 w-24 h-12"),
-                        cls="flex border-4 border-green-600 justify-evenly space-x-2 ml-12 mr-12",
+                        cls=(
+                            "flex border-4 border-green-600 justify-evenly "
+                            "space-x-2 ml-12 mr-12"
+                        ),
                     ),
                 ),
             ),
