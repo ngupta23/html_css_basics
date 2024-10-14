@@ -125,6 +125,110 @@ def create_app():
                     cls="flex bg-green-200 p-4 mx-16",
                 ),
             ),
+            # https://www.geeksforgeeks.org/tailwind-css-flex-direction/
+            fh.Div(
+                blank,
+                fh.Div(
+                    "display=flex-row",
+                    fh.Span("1", cls="bg-green-800 w-24 h-12"),
+                    fh.Span("2", cls="bg-green-400 w-24 h-12"),
+                    cls="flex flex-row justify-evenly",
+                ),
+                blank,
+                fh.Div(
+                    "display=flex-col",
+                    fh.Span("1", cls="bg-green-800 w-24 h-12"),
+                    fh.Span("2", cls="bg-green-400 w-24 h-12"),
+                    cls="flex flex-col justify-evenly",
+                ),
+            ),
+            # https://www.geeksforgeeks.org/tailwind-css-flex-wrap/
+            fh.Div(
+                blank,
+                fh.Div(
+                    "display=flex-wrap",
+                    fh.Span("1", cls="bg-green-900 w-24 h-12"),
+                    fh.Span("2", cls="bg-green-800 w-24 h-12"),
+                    fh.Span("3", cls="bg-green-700 w-24 h-12"),
+                    fh.Span("4", cls="bg-green-600 w-24 h-12"),
+                    fh.Span("5", cls="bg-green-500 w-24 h-12"),
+                    fh.Span("6", cls="bg-green-400 w-24 h-12"),
+                    cls="ml-24 h-28 w-96 flex flex-wrap bg-green-200 border-solid border-4 border-green-900",
+                ),
+                blank,
+                fh.Div(
+                    # compresses the content irrespective of the width you have specified
+                    "display=flex-nowrap",
+                    fh.Span("1", cls="bg-green-900 w-24 h-12"),
+                    fh.Span("2", cls="bg-green-800 w-24 h-12"),
+                    fh.Span("3", cls="bg-green-700 w-24 h-12"),
+                    fh.Span("4", cls="bg-green-600 w-24 h-12"),
+                    fh.Span("5", cls="bg-green-500 w-24 h-12"),
+                    fh.Span("6", cls="bg-green-400 w-24 h-12"),
+                    cls="ml-24 h-28 w-96 flex flex-nowrap bg-green-200 border-solid border-4 border-green-900",
+                ),
+            ),
+            # https://www.geeksforgeeks.org/tailwind-css-flex/
+            fh.Div(
+                blank,
+                fh.Div(
+                    fh.P("This is the effect of flex-1:", cls="ml-2"),
+                    fh.Div(
+                        fh.Div("Geeksforgeeks", cls="bg-green-900 flex-1"),
+                        fh.Div("Tailwind CSS", cls="bg-green-800 flex-1"),
+                        cls="flex m-2 text-white",
+                    ),
+                    fh.P("This is the effect of flex-initial:", cls="ml-2"),
+                    fh.Div(
+                        fh.Div("Geeksforgeeks", cls="bg-green-900 flex-initial"),
+                        fh.Div("Tailwind CSS", cls="bg-green-800 flex-initial"),
+                        cls="flex m-2 text-white",
+                    ),
+                    fh.P("This is the effect of flex-auto:", cls="ml-2"),
+                    fh.Div(
+                        fh.Div("Geeksforgeeks", cls="bg-green-900 flex-auto"),
+                        fh.Div("Tailwind CSS", cls="bg-green-800 flex-auto"),
+                        cls="flex m-2 text-white",
+                    ),
+                    fh.P("This is the effect of flex-none:", cls="ml-2"),
+                    fh.Div(
+                        fh.Div("Geeksforgeeks", cls="bg-green-900 flex-none"),
+                        fh.Div("Tailwind CSS", cls="bg-green-800 flex-none"),
+                        cls="flex m-2 text-white",
+                    ),
+                    id="main",
+                    cls="bg-green-200 border-4 border-green-600 w-2/3 ml-32",
+                ),
+            ),
+            # https://www.geeksforgeeks.org/tailwind-css-flex-grow/
+            fh.Div(
+                blank,
+                fh.Div(
+                    fh.P("flex-grow-0 (only grows to the space needed):", cls="ml-2"),
+                    fh.Div(
+                        fh.Div("Side Part", cls="rounded bg-green-600 flex-grow h-12"),
+                        fh.Div(
+                            "Flex-Grow-0", cls="rounded bg-green-300 flex-grow-0 h-12"
+                        ),
+                        fh.Div(
+                            "Side Part", cls="rounded bg-green-600 flex-grow h-12 mr-12"
+                        ),
+                        cls="flex border-4 border-green-600 justify-evenly space-x-2 ml-12 mr-12",
+                    ),
+                ),
+                blank,
+                fh.Div(
+                    fh.P("flex-grow (grows to occupy remaining space):", cls="ml-2"),
+                    fh.Div(
+                        fh.Div("Side Part", cls="rounded bg-green-600 w-24 h-12"),
+                        fh.Div(
+                            "Flex-Grow-0", cls="rounded bg-green-300 flex-grow h-12"
+                        ),
+                        fh.Div("Side Part", cls="rounded bg-green-600 w-24 h-12"),
+                        cls="flex border-4 border-green-600 justify-evenly space-x-2 ml-12 mr-12",
+                    ),
+                ),
+            ),
         )
 
     return app
