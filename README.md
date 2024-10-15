@@ -2,7 +2,11 @@
 [![CI](https://github.com/ngupta23/html_css_basics/actions/workflows/ci.yaml/badge.svg)](https://github.com/ngupta23/html_css_basics/actions/workflows/ci.yaml)
 
 # html_css_basics
-A template for initializing a python repository managed with `uv`
+This is a repository to exploare the basics of HTML and CSS. It uses the following
+
+* [Tailwind CSS](https://tailwindcss.com/)
+  * Tutorial: https://www.geeksforgeeks.org/tailwind-css/?ref=shm
+
 
 ## 🛠️ Create the Development Environment
 
